@@ -89,15 +89,15 @@
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <p class="text-gray-900 whitespace-no-wrap">
                                     @if($caso['sospecha']=='on')
-                                      {{-- <span class="material-symbols-outlined">
+                                      <span class="material-symbols-outlined">
                                         check
-                                      </span>  --}}
-                                      SI
+                                      </span> 
+                                      {{-- SI --}}
                                     @else
-                                    {{-- <span class="material-symbols-outlined">
+                                    <span class="material-symbols-outlined">
                                       close
-                                      </span> --}}
-                                      NO
+                                      </span>
+                                      {{-- NO --}}
                                     @endif
                                   
                                 </p>
@@ -105,15 +105,15 @@
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <p class="text-gray-900 whitespace-no-wrap">
                                     @if($caso['reincidencia']=='on')
-                                      {{-- <span class="material-symbols-outlined">
+                                      <span class="material-symbols-outlined">
                                         check
-                                      </span>  --}}
-                                      SI
+                                      </span> 
+                                      {{-- SI --}}
                                     @else
-                                    {{-- <span class="material-symbols-outlined">
+                                    <span class="material-symbols-outlined">
                                       close
-                                      </span> --}}
-                                      NO
+                                      </span>
+                                      {{-- NO --}}
                                     @endif
                                   
                                 </p>
@@ -155,6 +155,7 @@
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <p class="text-gray-900 whitespace-no-wrap">
                                   {{$caso['created_at']}}
+                                  {{-- {{$caso}} --}}
                                 </p>
                               </td>
                             </tr>
@@ -174,28 +175,28 @@
         </div>
     </div>
 
-    @section('js')
-    <script>
-      $('#casos').DataTable({
-        // responsive: true,
-        // autoWidth: false,
-        select: true,
+   {{--  @section('js')
+      <script>
+        $('#casos').DataTable({
+          // responsive: true,
+          // autoWidth: false,
+          select: false,
 
-        "language": {
-        "lengthMenu": "Mostrar _MENU_ registros por página",
-        "zeroRecords": "Ningún registro encontrado - Lo sentimos",
-        "info": "Mostrando la página _PAGE_ de _PAGES_",
-        "infoEmpty": "Ningún registro encontrado",
-        "infoFiltered": "(Filtrado de _MAX_ registros totales)",
-        "search" : "Buscar",
-        "paginate":{
-          'next' : 'Siguiente',
-          'previous' : 'Anterior',
-        }
-        }
+          "language": {
+          "lengthMenu": "Mostrar _MENU_ registros por página",
+          "zeroRecords": "Ningún registro encontrado - Lo sentimos",
+          "info": "Mostrando la página _PAGE_ de _PAGES_",
+          "infoEmpty": "Ningún registro encontrado",
+          "infoFiltered": "(Filtrado de _MAX_ registros totales)",
+          "search" : "Buscar",
+          "paginate":{
+            'next' : 'Siguiente',
+            'previous' : 'Anterior',
+          }
+          }
 
-      });
-    </script>
-  @endsection
+        });
+      </script>
+    @endsection --}}
 
 </x-app-layout>

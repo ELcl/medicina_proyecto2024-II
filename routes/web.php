@@ -67,6 +67,7 @@ Route::middleware('auth')->group(function () {
     })->name('formularios.index');
 
 // Reportes
+    Route::get('/reportes', [ReportController::class, 'index'])->name('reportes.index');
     Route::get('/reportepacientes', [ReportController::class, 'reporteUsuario'])->name('reporteP');
     Route::get('/reportecasos', [ReportController::class, 'reporteCasos'])->name('reporteC');
     Route::post('/reportecasosfiltrado', [ReportController::class, 'reporteCasosFiltrado'])->name('reporteF');

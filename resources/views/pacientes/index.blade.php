@@ -144,6 +144,7 @@
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <p class="text-gray-900 whitespace-no-wrap">
                                   {{$paciente['created_at']}}
+                                  {{-- {{$paciente}} --}}
                                 </p>
                               </td>
                             </tr>
@@ -159,7 +160,7 @@
         </div>
     </div>
 
-    @section('js')
+    {{-- @section('js')
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/dataTables.tailwindcss.min.js"></script>
@@ -185,7 +186,7 @@
 
           });
         </script>
-    @endsection
+    @endsection --}}
 
 
 </x-app-layout>

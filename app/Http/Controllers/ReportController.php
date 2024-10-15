@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
+    public function index(){
+        $data = [
+            'labels' => ['Viacha', 'La Paz', 'Caranavi', 'El Alto', 'Apolo', 'Peñas'],
+            'values' => [12, 19, 3, 5, 2, 3]
+        ];
+        return view ('reportes.index', compact('data'));
+    }
+
     public function reporteUsuario()
     {   $pacientes = Paciente::get();
         $pdf = PDF::loadView('reporteusuarios', ['pacientes' => $pacientes]);

@@ -15,6 +15,9 @@
                 {{-- Dashboard --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
                         {{ __('Inicio') }}
                     </x-nav-link>
                 </div>
@@ -22,6 +25,9 @@
                 @role('admin')
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
                         {{ __('Usuarios') }}
                     </x-nav-link>
                 </div>
@@ -29,6 +35,9 @@
                 <!-- Pacientes-->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('pacientes.index')" :active="request()->routeIs('pacientes.index')">
+                        <span class="material-symbols-outlined">
+                            stethoscope
+                        </span>
                         {{ __('Pacientes') }}
                     </x-nav-link>
                 </div>
@@ -36,7 +45,22 @@
                 <!-- Casos-->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('casos.index')" :active="request()->routeIs('casos.index')">
+                        <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
                         {{ __('Casos') }}
+                    </x-nav-link>
+                </div>
+                @endrole
+                {{-- REPORTES --}}
+                @role('admin')
+                <!-- Casos-->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('reportes.index')" :active="request()->routeIs('reportes.index')">
+                        <span class="material-symbols-outlined">
+                            summarize
+                        </span>
+                        {{ __('Reportes') }}
                     </x-nav-link>
                 </div>
                 @endrole
